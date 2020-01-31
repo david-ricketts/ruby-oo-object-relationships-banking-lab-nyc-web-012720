@@ -52,7 +52,7 @@ class Transfer
       self.sender.balance -= reverse_amount
       self.receiver.balance += reverse_amount
       self.status = "reversed"
-        binding.pry 
+        # binding.pry 
       end
       
       
