@@ -47,14 +47,17 @@ class Transfer
     
     
     def reverse_transfer
-      # binding.pry
+      if self.status == "complete"
+        
       reverse_amount = @@Transfer_amount[0]
       
       self.sender.balance += reverse_amount
       self.receiver.balance -= reverse_amount
       self.status = "reversed"
+      end 
+      
     
-      end
+    end
       
       
   end
