@@ -12,8 +12,11 @@ class Transfer
   end 
   
   def valid?
-    self.status == "open"
-    
+    if self.sender.status == "open" && self.receiver.status == "open"
+      true 
+    else 
+      false 
+    end
   end 
 
 end
