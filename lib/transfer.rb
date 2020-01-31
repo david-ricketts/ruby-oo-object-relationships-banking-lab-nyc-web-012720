@@ -6,7 +6,7 @@ class Transfer
   # your code here
 
 
-    @@account = 0
+    
     @@Transfer_amount = []
 
   attr_accessor :sender, :receiver ,:amount, :status
@@ -16,6 +16,7 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
+    @account = 0
     @@Transfer_amount << self.amount
     
   end 
@@ -32,7 +33,7 @@ class Transfer
   end 
   
   def execute_transaction
-    if self.valid? && @@account <= 1 && self.sender.balance >= self.amount
+    if self.valid? && @account <= 1 && self.sender.balance >= self.amount
       self.sender.balance -= self.amount
       self.receiver.balance += self.amount
       @account += 1
