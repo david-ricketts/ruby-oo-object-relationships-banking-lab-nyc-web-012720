@@ -28,6 +28,10 @@ class BankAccount
       return true 
       
     end
+  end
+  
+  def close_account 
+    
   end 
   
 
