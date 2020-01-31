@@ -2,6 +2,10 @@ require_relative './bank_account.rb'
 
 class Transfer
   # your code here
+
+
+    @@account = 0 
+
   attr_accessor :sender, :receiver ,:amount, :status
   
   def initialize(sender, receiver, amount)
@@ -9,7 +13,11 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
+    @@account += 1
   end 
+  
+
+  
   
   def valid?
     if self.sender.valid? && self.receiver.valid? 
