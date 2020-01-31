@@ -12,6 +12,7 @@ class Transfer
   end 
   
   def valid?
+    self.status == "open"
     
   end 
 
