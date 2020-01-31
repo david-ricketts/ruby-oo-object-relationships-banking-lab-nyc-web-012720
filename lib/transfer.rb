@@ -33,6 +33,9 @@ class Transfer
       self.receiver.balance += self.amount
       @@account += 1
       @status = "complete"
+    else
+      ""
+    
     end 
   end
   
