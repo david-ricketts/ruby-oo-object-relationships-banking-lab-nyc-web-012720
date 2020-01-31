@@ -7,4 +7,6 @@ class Transfer
     @other_name = other_name
     @amount = amount
   end 
+  
+  
 end
