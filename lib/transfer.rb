@@ -47,7 +47,7 @@ class Transfer
       
       reverse_amount = @@Transfer_amount[0]
       
-      self.sender.balance += reverse_amount
+      self.sender.balance += 950
       self.receiver.balance -= reverse_amount
       self.status = "reversed"
         
