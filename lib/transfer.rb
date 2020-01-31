@@ -5,6 +5,7 @@ class Transfer
 
 
     @@account = 0 
+    @@Transfer_amount = []
 
   attr_accessor :sender, :receiver ,:amount, :status
   
@@ -13,6 +14,7 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
+    @@Transfer_amount << self.amount
     
   end 
   
@@ -43,8 +45,11 @@ class Transfer
     
     def reverse_transfer
       
-      if @@account == 1 
-        
+      reverse_amount = @@Transfer_amount[0]
+      
+      self.sender.balance += reverse_amount
+      self.receiver.balance -+ reverse_transfer
+      self.status = "reversed"
         
       end
       
