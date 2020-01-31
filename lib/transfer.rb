@@ -6,7 +6,7 @@ class Transfer
   # your code here
 
 
-    @@account = 0 
+    @@account = 0
     @@Transfer_amount = []
 
   attr_accessor :sender, :receiver ,:amount, :status
@@ -35,7 +35,7 @@ class Transfer
     if self.valid? && @@account <= 1 && self.sender.balance >= self.amount
       self.sender.balance -= self.amount
       self.receiver.balance += self.amount
-      @@account += 1
+      @account += 1
       @status = "complete"
     else
       
