@@ -47,7 +47,7 @@ class Transfer
     
     
     def reverse_transfer
-      binding.pry
+      # binding.pry
       reverse_amount = @@Transfer_amount[0]
       
       self.sender.balance += reverse_amount
