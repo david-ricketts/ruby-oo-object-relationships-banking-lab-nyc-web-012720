@@ -39,6 +39,17 @@ class Transfer
       return "Transaction rejected. Please check your account balance."
     
     end 
+    
+    
+    def reverse_transfer
+      
+      if @@account == 1 
+        
+        
+      end
+      
+      
+    end
   end
   
   
